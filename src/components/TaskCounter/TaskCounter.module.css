@@ -1,0 +1,9 @@
+.text {
+  margin: 0;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
