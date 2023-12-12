@@ -6,12 +6,12 @@ import { AppBar } from 'components/AppBar/AppBar';
 import { TaskForm } from 'components/TaskForm/TaskForm';
 import { TaskList } from 'components/TaskList/TaskList';
 import { fetchTasks } from '../redux/operations';
-import { getError, getIsLoading } from '../redux/selectors';
+import { selectError, selectIsLoading } from '../redux/selectors';
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isLoadig = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  const isLoadig = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchTasks);
